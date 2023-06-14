@@ -40,6 +40,7 @@ class MainActivity : ComponentActivity() {
             ComposeSwipeablePagesTheme {
                 val pagerState = rememberPagerState()
                 val scope = rememberCoroutineScope()
+
                 Box(modifier = Modifier.fillMaxSize()) {
                     HorizontalPager(
                         pageCount = animals.size,
@@ -75,7 +76,8 @@ class MainActivity : ComponentActivity() {
                         ) {
                             Icon(
                                 imageVector = Icons.Default.KeyboardArrowLeft,
-                                contentDescription = "Go back"
+                                contentDescription = "Go back",
+                                tint = MaterialTheme.colors.onBackground
                             )
                         }
                         IconButton(
@@ -90,7 +92,8 @@ class MainActivity : ComponentActivity() {
                         ) {
                             Icon(
                                 imageVector = Icons.Default.KeyboardArrowRight,
-                                contentDescription = "Go forward"
+                                contentDescription = "Go forward",
+                                tint = MaterialTheme.colors.onBackground
                             )
                         }
                     }
